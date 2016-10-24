@@ -24,5 +24,6 @@ for forecast in resp['forecasts']:
     print(forecast['dateLabel'] + forecast['date'])
     print(forecast['telop'])
     if forecast['temperature']['max'] == None: continue
+    if forecast['temperature']['min'] == None: continue
     print('最高気温:{}度,最低気温:{}度'.format(forecast['temperature']['max']['celsius'],
           forecast['temperature']['min']['celsius']))
