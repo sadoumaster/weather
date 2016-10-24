@@ -12,12 +12,12 @@ import lnetatmo
 import weather.abs_hum as abs_hum
 authorization = lnetatmo.ClientAuth()
 devList = lnetatmo.DeviceList(authorization)
-start= datetime.datetime(2016, 7, 1, 0, 0, 0)
+start= datetime.datetime(2016, 10, 23, 0, 0, 0)
 start= int(time.mktime(start.timetuple()))
-end= datetime.datetime(2016, 7, 1, 23, 59, 59)
+end= datetime.datetime(2016, 10, 23, 23, 59, 59)
 end= int(time.mktime(end.timetuple()))
-#module='02:00:00:03:df:2e'#outdoor
-module='70:ee:50:03:d7:40'#indoor
+module='02:00:00:03:df:2e'#outdoor
+#module='70:ee:50:03:d7:40'#indoor
 
 measure_dict=devList.getMeasure( device_id='70:ee:50:03:d7:40',                             # Replace with your values
                        module_id=module,                             #    "      "    "    "
